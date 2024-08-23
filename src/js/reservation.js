@@ -1,12 +1,10 @@
 import {token} from "./helpers.js";
 export function reservation() {
-    let url;
-    
-    if (window.location.hostname ==="localhost") {
-        url = "http://localhost:8080"
-      }else{
-        url = "https://fiver.up.railway.app"
-      }
+   //DESARROLLO
+  // let url = "http://localhost:8080";
+  
+  //PRODUCCION 
+  let url = "https://fiver.up.railway.app";
 
     let reservationForm = document.getElementById("reservation-form");
 
@@ -57,13 +55,11 @@ export function reservation() {
     }
 }
 export function getAllReservation(){
-    let url;
+   //DESARROLLO
+  // let url = "http://localhost:8080";
 
-    if (window.location.hostname ==="localhost") {
-        url = "http://localhost:8080"
-      }else{
-        url = "https://fiver.up.railway.app"
-      }
+  //PRODUCCION 
+  let url = "https://fiver.up.railway.app";
 
   token(`${url}/api/v1/reservations`, {
     method: 'GET',

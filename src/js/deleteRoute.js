@@ -20,14 +20,11 @@ export function deleteLocation(){
       });
     
       function deleteLocationById(locationId) {
-        let  url;
+        //DESARROLLO
+        // let url = "http://localhost:8080";
+        //PRODUCCION 
+        let url = "https://fiver.up.railway.app";
 
-        if (window.location.hostname ==="localhost") {
-          url = "http://localhost:8080"
-        }else{
-          url = "https://fiver.up.railway.app"
-        }
-    
         token(`${url}/api/v1/route/delete/${locationId}`, {
           method: 'DELETE'
         })

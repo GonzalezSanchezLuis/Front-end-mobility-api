@@ -20,14 +20,11 @@ export function deleteReservation(){
       });
     
       function deleteReservationById(reservationId) {
-        let url;
+        //DESARROLLO
+        // let url = "http://localhost:8080";
+        //PRODUCCION 
+        let url = "https://fiver.up.railway.app"; 
 
-        if (window.location.hostname ==="localhost") {
-          url = "http://localhost:8080"
-        }else{
-          url = "https://fiver.up.railway.app"
-        }
-    
         token(`${url}/api/v1/reservation-delete/${reservationId}`, {
           method: 'DELETE'
         })

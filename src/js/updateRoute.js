@@ -1,12 +1,10 @@
 import { token } from './helpers.js'
 export function getLocationById(id) {
-    let url;
-  
-  if (window.location.hostname ==="localhost") {
-    url = "http://localhost:8080"
-  }else{
-    url = "https://fiver.up.railway.app"
-  }
+    //DESARROLLO
+    // let url = "http://localhost:8080";
+
+    //PRODUCCION 
+    let url = "https://fiver.up.railway.app";
 
     let editForm = document.getElementById("edit-form");
 
@@ -37,13 +35,11 @@ export function getLocationIdFromURL() {
 }
 
 export function update(id) {
-    let url;
-
-    if (window.location.hostname ==="localhost") {
-        url = "http://localhost:8080"
-      }else{
-        url = "https://fiver.up.railway.app"
-      } 
+    //DESARROLLO
+    //let url = "http://localhost:8080";
+    
+    //PRODUCCION 
+    let url = "https://fiver.up.railway.app";
 
     let editForm = document.getElementById("edit-form");
 

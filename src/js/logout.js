@@ -2,15 +2,12 @@
 export function logout(){
     let logout = document.getElementById("logout");
     if (logout) {
-        logout.addEventListener("click", () => {
-    
-    let url;
-
-    if (window.location.hostname ==="localhost") {
-        url = "http://localhost:8080"
-      }else{
-        url = "https://fiver.up.railway.app"
-      }
+        logout.addEventListener("click", () => { 
+        //DESARROLLO
+        // let url = "http://localhost:8080";
+        
+        //PRODUCCION 
+        let url = "https://fiver.up.railway.app";
 
     let token = localStorage.getItem("token");
 

@@ -1,12 +1,11 @@
 
 export function login() {
-    let url;
-
-    if (window.location.hostname ==="localhost") {
-      url = "http://localhost:8080"
-    }else{
-      url = "https://fiver.up.railway.app"
-    }
+    //DESARROLLO
+    // let url = "http://localhost:8080";
+    
+    //PRODUCCION 
+    let url = "https://fiver.up.railway.app";
+    
     let login = document.getElementById("login");
   
     if (login) {

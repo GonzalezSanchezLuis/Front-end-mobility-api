@@ -1,13 +1,11 @@
 import { token} from './helpers.js'; 
 
 export function location() {
-  let url; 
+//DESARROLLO
+// let url = "http://localhost:8080";
 
-  if (window.location.hostname ==="localhost") {
-    url = "http://localhost:8080"
-  }else{
-    url = "https://fiver.up.railway.app"
-  }
+//PRODUCCION 
+let url = "https://fiver.up.railway.app";
 
   let locationForm = document.getElementById("location");
 
@@ -39,13 +37,11 @@ export function location() {
 }
 
 export function getAllLocations() {
-  let url;
+//DESARROLLO
+// let url = "http://localhost:8080";
 
-  if (window.location.hostname ==="localhost") {
-    url = "http://localhost:8080"
-  }else{
-    url = "https://fiver.up.railway.app"
-  }
+//PRODUCCION 
+let url = "https://fiver.up.railway.app";
 
   token(`${url}/api/v1/route/routes`, {
     method: 'GET',
